@@ -68,7 +68,7 @@ public class Main {
         Vector vectorDE1 = vector1.multiplicacionEscalar(sumA);
         Vector vectorDEA1 = vector1.multiplicacionEscalar(a1);
         Vector vectorDEA2 = vector1.multiplicacionEscalar(a2);
-        Vector vectorDE2 = vectorDA1.sumaVectores(vectorDEA2);
+        Vector vectorDE2 = vectorDEA1.sumaVectores(vectorDEA2);
         System.out.println(vectorDE2 + " = " + vectorDE1);
     }
 }
