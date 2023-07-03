@@ -6,7 +6,6 @@ import java.util.List;
 public class Vector {
     private List<Float> componentes;
     public Vector(List<Float> componentes){
-        this.componentes = new ArrayList<>();
         this.componentes = componentes;
     }
 
@@ -49,6 +48,6 @@ public class Vector {
 
     @Override
     public String toString() {
-        return "" + componentes + "";
+        return  componentes.toString();
     }
 }
