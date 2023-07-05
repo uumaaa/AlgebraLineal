@@ -1,3 +1,4 @@
+import model.Matriz;
 import model.Vector;
 
 import java.util.ArrayList;
@@ -70,5 +71,22 @@ public class Main {
         Vector vectorDEA2 = vector1.multiplicacionEscalar(a2);
         Vector vectorDE2 = vectorDEA1.sumaVectores(vectorDEA2);
         System.out.println(vectorDE2 + " = " + vectorDE1);
+        //Matrices
+        List<Vector> vectores1 = new ArrayList<>();
+        vectores1.add(vector1);
+        vectores1.add(vector1);
+        vectores1.add(vector1);
+        List<Vector> vectores2 = new ArrayList<>();
+        vectores2.add(vector2);
+        vectores2.add(vector2);
+        vectores2.add(vector2);
+        Matriz matriz1 = new Matriz(vectores1);
+        Matriz matriz2 = new Matriz(vectores2);
+        Matriz matrizSum = matriz1.sumarMatriz(matriz2);
+        Matriz matrizMul = matriz2.multiplicarEscalar(2f);
+        System.out.println(matriz1);
+        System.out.println(matriz2);
+        System.out.println(matrizSum);
+        System.out.println(matrizMul);
     }
 }

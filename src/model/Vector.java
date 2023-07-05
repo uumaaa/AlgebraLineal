@@ -2,6 +2,7 @@ package model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Vector {
     private List<Float> componentes;
@@ -49,5 +50,18 @@ public class Vector {
     @Override
     public String toString() {
         return  componentes.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Vector vector = (Vector) o;
+        return Objects.equals(componentes, vector.componentes);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(componentes);
     }
 }
